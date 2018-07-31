@@ -10,7 +10,7 @@ public class ItemDestroyer : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        this.unitychan = GameObject.Find("unitychan");
+        unitychan = GameObject.Find("unitychan");
 		
 	}
 	

@@ -70,10 +70,13 @@ public class UnityChanController : MonoBehaviour {
         {
             //左に移動
             this.myRigidbody.AddForce(-this.turnForce, 0, 0);
-        } else if ((Input.GetKey(KeyCode.RightArrow) || this.isRButtonDown) && this.transform.position.x < this.movableRange) {
+        }
+        if ((Input.GetKey(KeyCode.RightArrow) || this.isRButtonDown) && this.transform.position.x < this.movableRange)
+        {
             //右に移動
             this.myRigidbody.AddForce(this.turnForce, 0, 0);
         }
+
         //Jumpステートの場合はJumpにfalseをセットする
         if (this.myAnimator.GetCurrentAnimatorStateInfo(0).IsName("Jump"))
         {
